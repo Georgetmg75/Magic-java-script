@@ -1,0 +1,126 @@
+body {
+  height: 100vh;
+  margin: 0;
+  animation: gradientFlow 15s ease infinite;
+  background: linear-gradient(-45deg, #ff6b6b, #f7d794, #70a1ff, #2ed573);
+  background-size: 400% 400%;
+  font-size: large;
+  font-family:monospace;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Define the animation */
+@keyframes hoverGrow {
+  0% {
+    transform: scale(1);
+    background-color: #3498db;
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: #2ecc71;
+  }
+}
+
+/* Button default style */
+button {
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: monospace;
+}
+
+/* Trigger the animation on hover */
+button:hover {
+  animation: hoverGrow 0.3s forwards;
+}
+
+/* Hide default radio circle */
+input[type="radio"] {
+  display: none;
+
+}
+
+/* Base style for label */
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  opacity: 60%;
+}
+
+/* Keyframes animation for hover effect */
+@keyframes pulseHover {
+  0% {
+    transform: scale(1);
+    background-color: black;
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: darkslategray;
+  }
+}
+
+/* Hover triggers animation */
+label:hover {
+  animation: pulseHover 0.3s forwards;
+}
+
+/* Style for selected */
+input[type="radio"]:checked + label {
+  background-color: #27ae60;
+}
+
+
+p{
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: bolder;
+    box-shadow: slategrey;
+}
+
+input[type="Number"]{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    border: none;
+}
+
+form{
+    
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+    
+}
+
+#result{
+    font-size: 1.7em;
+    font-weight: bold;
+}

@@ -1,0 +1,84 @@
+body{
+    background-image: url(Picsart_25-07-24_11-09-03-684.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(2px);
+    background-color: hsl(0, 0%, 100%,0.1);
+    width: 100%;
+}
+
+
+#stopwatch {
+  font-size: 3em;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  background-color: hsl(0, 0%, 100%,0.1);
+  font-family: monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:nth-of-type(1) {
+  background-color: #00ffcc;
+  color: #121212;
+  box-shadow: 0 0 10px #00ffcc80;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #00e6b3;
+  transform: scale(1.05);
+}
+
+button:nth-of-type(2) {
+  background-color: #ffaa00;
+  color: #121212;
+  box-shadow: 0 0 10px #ffaa0080;
+}
+
+button:nth-of-type(2):hover {
+  background-color: #e69500;
+}
+
+button:nth-of-type(3) {
+  background-color: #ff4444;
+  color: #fff;
+  box-shadow: 0 0 10px #ff444480;
+}
+
+button:nth-of-type(3):hover {
+  background-color: #e62e2e;
+}

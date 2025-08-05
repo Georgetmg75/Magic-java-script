@@ -1,0 +1,33 @@
+body {
+    background-color: burlywood;
+    text-align: center;
+}
+
+
+.dice {
+  font-size: 200px;
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  75% { transform: rotate(540deg); }
+  100% { transform: rotate(720deg); }
+}
+
+.rolling {
+  animation: roll 0.6s ease;
+}
+
+.button{
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+}
+
+.button:hover{
+    background-color: gray;
+}

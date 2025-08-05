@@ -1,0 +1,220 @@
+body {
+    font-family: monospace;
+    margin: 40px;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff6b6b, #f8e473, #6bc1ff, #a17ff5);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark layer */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: 30px auto;
+  text-align: center;
+  width: fit-content;
+  display: block;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+
+/* Group checkbox and label text */
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+/* Hover effect on label */
+label:hover {
+  transform: scale(1.1);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect on checkbox */
+label:hover input[type="checkbox"] {
+  border-color: black;
+  background-color: #f0f8ff;
+}
+
+/* Checkmark animation */
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #6bc1ff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  animation: checkmarkPop 0.3s forwards;
+}
+
+@keyframes checkmarkPop {
+  0% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Checkmark animation */
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #6bc1ff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  animation: checkmarkPop 0.3s forwards;
+}
+
+/* Hover effect: scale + color change */
+input[type="checkbox"]:hover {
+  transform: scale(1.2);
+  border-color: #a17ff5;
+  background-color: #f0f8ff;
+}
+
+/* Checkmark pop animation */
+@keyframes checkmarkPop {
+  0% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+input[type="number"]{
+    border-radius: 5px;
+    border: none;
+    padding: 0.3rem;
+}
+
+
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 16px;
+}
+#password {
+    margin-top: 15px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    word-break: break-all;
+}
+
+#generate {
+  padding: 10px 20px;
+  background-color: #6bc1ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: scale up + color shift */
+#generate:hover {
+  transform: scale(1.1);
+  background-color: #4aaae6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active (click): scale down */
+#generate:active {
+  transform: scale(0.95);
+}
+
+#password {
+  margin-top: 10px;
+  padding: 12px 16px;
+  font-weight: bold;
+  font-size: 18px;
+  word-break: break-all;
+  background: linear-gradient(135deg, #d4d4d4, #f0f0f0);
+  border: 2px solid #999;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #2c2c2c;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Hover effect: slight lift */
+#password:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2);
+}
